@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Hexo</title>
+  <title>花叔的修行</title>
   
-  
+  <subtitle>技术的心得随记</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
+  <link href="http://shipf.github.io/"/>
   <updated>2018-08-21T03:53:27.000Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>http://shipf.github.io/</id>
   
   <author>
-    <name>John Doe</name>
+    <name>huage</name>
     
   </author>
   
@@ -18,8 +18,8 @@
   
   <entry>
     <title>archetype</title>
-    <link href="http://yoursite.com/2018/08/20/archetype/"/>
-    <id>http://yoursite.com/2018/08/20/archetype/</id>
+    <link href="http://shipf.github.io/2018/08/20/archetype/"/>
+    <id>http://shipf.github.io/2018/08/20/archetype/</id>
     <published>2018-08-20T09:39:25.000Z</published>
     <updated>2018-08-21T03:53:27.000Z</updated>
     
