@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-08-20T08:12:48.000Z</updated>
+  <updated>2018-08-21T03:53:27.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>archetype</title>
+    <link href="http://yoursite.com/2018/08/20/archetype/"/>
+    <id>http://yoursite.com/2018/08/20/archetype/</id>
+    <published>2018-08-20T09:39:25.000Z</published>
+    <updated>2018-08-21T03:53:27.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Archetype：骨架的意思。</p><h1 id="Archetype是什么？"><a href="#Archetype是什么？" class="headerlink" title="Archetype是什么？"></a>Archetype是什么？</h1><p>简单的说，Archetype是Maven工程的模板工具包。</p><p>一个Archetype定义了要做的相同类型事情的初始样式或模型。这个名称给我们提供来了一个一致的生成Maven工程的方式。Archetype会帮助作者给用户创建Maven工程模板，并给用户提供生成相关工程模板版本的参数化方法。</p><p>使用Archetype提供的好的方法，是开发者能够使用最佳实践来快速的构建和组织一致化的工程。</p><p>在Maven工程中，我们努力使用Archetype来尽可能快的给用户提供示例工程，同时也会把Maven的最佳实践介绍给新的用户。一个新的用户可以使用工作中的Maven工作作为跳板来研究更过的Maven中功能。<br>我们也可以使用Archetype的添加机制，这样就意味着允许我们抓取Archetype中项目片段，并把它们添加到既存的工程中。Maven网站的Archetype就是很好的例子。例如，你可以使用<code>quick start archetype</code>来生成一个工程，然后就可以通过其中既存的<code>site archetype</code>来快速的创建一个网址工程。你能够使用Archetype来做很多这样的事情。</p><p>在你的团队中可能想要标准化的J2EE开发，这需要你提供EJBs、或者是WARs、或者是Web services的原型。一旦在你团队资源库中创建和部署这些原型，它们就可以在你团队内共享使用。</p><h1 id="如何使用Archetype"><a href="#如何使用Archetype" class="headerlink" title="如何使用Archetype"></a>如何使用Archetype</h1><p>要基于Archetype来创建一个新的工程，需要像下面示例这样来调用：<br><code>mvn archetype:generate</code></p><h1 id="常用Archetype："><a href="#常用Archetype：" class="headerlink" title="常用Archetype："></a>常用Archetype：</h1><p><em>maven-archetype-quickstart</em></p><p>默认的Archetype,基本内容包括：</p><ul><li>一个包含junit依赖声明的pom.xml</li><li>src/main/java主代码目录及一个名为App的类</li><li>src/test/java测试代码目录及一个名为AppTest的测试用例</li></ul><p><em>maven-archetype-webapp</em></p><p>　　一个最简单的Maven war项目模板，当需要快速创建一个Web应用的时候可以使用它。生成的项目内容包括：</p><ul><li>一个packaging为war且带有junit依赖声明的pom.xml</li><li>src/main/webapp/目录</li><li>src/main/webapp/index.jsp文件</li><li>src/main/webapp/WEB-INF/web.xml文件</li></ul><h1 id="建立自己的Archetype"><a href="#建立自己的Archetype" class="headerlink" title="建立自己的Archetype"></a>建立自己的Archetype</h1><h2 id="创建自己的project"><a href="#创建自己的project" class="headerlink" title="创建自己的project"></a>创建自己的project</h2><p>通过IDEA或者spring init 来创建自己的project</p><h2 id="在project的根目录下"><a href="#在project的根目录下" class="headerlink" title="在project的根目录下"></a>在project的根目录下</h2><pre><code>mvn clean packagemvn archetype:create-from-project </code></pre><h2 id="修改archetype的pom"><a href="#修改archetype的pom" class="headerlink" title="修改archetype的pom"></a>修改archetype的pom</h2><p>cd target,在pom.xml 中添加</p><pre><code>&lt;distributionManagement&gt;     &lt;repository&gt;       &lt;id&gt;maven-releases&lt;/id&gt;       &lt;url&gt;http://xxx.com/repository/maven-releases/&lt;/url&gt;     &lt;/repository&gt;     &lt;snapshotRepository&gt;       &lt;id&gt;maven-snapshots&lt;/id&gt;       &lt;url&gt;http://xxx.com/repository/maven-snapshots/&lt;/url&gt;     &lt;/snapshotRepository&gt;   &lt;/distributionManagement&gt;</code></pre><p>   如有需要修改version</p><h2 id="发布到nexus"><a href="#发布到nexus" class="headerlink" title="发布到nexus"></a>发布到nexus</h2><pre><code>mvn installmvn deploy</code></pre><h2 id="根据nexus仓库中的archetype生成"><a href="#根据nexus仓库中的archetype生成" class="headerlink" title="根据nexus仓库中的archetype生成"></a>根据nexus仓库中的archetype生成</h2><pre><code>mvn archetype:generate   -DgroupId=com.domain -DartifactId=cf-xxx   -Dpackage=com.domain.xxx -DarchetypeGroupId=com.domain -DarchetypeArtifactId=cf-archetype     -DarchetypeVersion=1.2.1 -DinteractiveMode=false</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Archetype：骨架的意思。&lt;/p&gt;
+&lt;h1 id=&quot;Archetype是什么？&quot;&gt;&lt;a href=&quot;#Archetype是什么？&quot; class=&quot;headerlink&quot; title=&quot;Archetype是什么？&quot;&gt;&lt;/a&gt;Archetype是什么？&lt;/h1&gt;&lt;p&gt;简单
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>
